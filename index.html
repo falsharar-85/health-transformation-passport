@@ -517,34 +517,94 @@ input{
     </button>
 
 
-    <div class="congratulations" id="congratulations">
+   <div class="congratulations" id="congratulations">
 
-      <div class="medal">🏅</div>
+  <div style="
+    background:linear-gradient(145deg,#063765,#075c96 65%,#087eaa);
+    color:white;
+    border-radius:22px;
+    padding:35px 30px;
+    max-width:520px;
+    margin:auto;
+    text-align:center;
+    border:2px solid rgba(255,255,255,.3);
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+  ">
 
-      <h2>تهانينا!</h2>
+    <div style="
+      font-size:18px;
+      letter-spacing:2px;
+      margin-bottom:5px;
+    ">
+      PASSPORT
+    </div>
 
-      <p>
-        تم بنجاح إكمال جميع محطات<br>
-        <strong>رحلة التحول الصحي</strong>
-      </p>
+    <h2 style="font-size:30px;margin:5px 0;">
+      جواز رحلة التحول الصحي
+    </h2>
 
-      <div class="badge">
-        منجز رحلة التحول الصحي
-        <br>
-        <small>HEALTH TRANSFORMATION JOURNEY COMPLETER</small>
+    <div style="
+      font-size:13px;
+      letter-spacing:1px;
+      color:#bcecf5;
+      margin-bottom:25px;
+    ">
+      PASSPORT TO HEALTH TRANSFORMATION
+    </div>
+
+    <div style="
+      border-top:1px solid rgba(255,255,255,.4);
+      border-bottom:1px solid rgba(255,255,255,.4);
+      padding:20px 5px;
+      text-align:right;
+      line-height:2.2;
+    ">
+
+      <div>
+        <strong>الاسم:</strong>
+        <span id="passportName"></span>
       </div>
 
-      <p>
-        شكرًا لمساهمتك في تعزيز مستقبل<br>
-        الصحة في وطننا.
-      </p>
+      <div>
+        <strong>المنشأة / المركز:</strong>
+        <span id="passportHospital"></span>
+      </div>
 
-      <button class="print-btn" onclick="window.print()">
-        🖨️ طباعة الجواز
-      </button>
+      <div>
+        <strong>القسم:</strong>
+        <span id="passportDepartment"></span>
+      </div>
+
+      <div>
+        <strong>تاريخ الإكمال:</strong>
+        <span id="passportDate"></span>
+      </div>
 
     </div>
 
+    <div style="
+      margin-top:25px;
+      font-size:22px;
+      font-weight:bold;
+    ">
+      ✓ تم إكمال رحلة التحول الصحي
+    </div>
+
+    <div style="
+      margin-top:6px;
+      font-size:13px;
+      color:#bcecf5;
+    ">
+      HEALTH TRANSFORMATION JOURNEY COMPLETED
+    </div>
+
+    <button class="print-btn" onclick="window.print()">
+      🖨️ طباعة الجواز
+    </button>
+
+  </div>
+
+</div>
   </div>
 
 
@@ -604,6 +664,18 @@ function finishJourney(){
     return;
 
   }
+
+  document.getElementById("passportName").innerText =
+  document.getElementById("name").value;
+
+document.getElementById("passportHospital").innerText =
+  document.getElementById("hospital").value;
+
+document.getElementById("passportDepartment").innerText =
+  document.getElementById("department").value;
+
+document.getElementById("passportDate").innerText =
+  document.getElementById("date").value;
 
   document.getElementById("congratulations").style.display =
     "block";
