@@ -23,5 +23,5 @@
 <div class="footer">معًا للتحول الصحي • Together for Health Transformation<br>إدارة التطوير التمريضي</div></div>
 <script>
 function toggle(e){e.classList.toggle('done');progress()}function progress(){let a=document.querySelectorAll('.station').length,b=document.querySelectorAll('.station.done').length,p=Math.round(b/a*100);pct.innerText=p+'%';fill.style.width=p+'%'}
-function finish(){let a=document.querySelectorAll('.station').length,b=document.querySelectorAll('.station.done').length;if(b<a){alert('يرجى إكمال جميع محطات رحلة التحول الصحي أولاً 🌟');return}pn.innerText=name.value||'—';pd.innerText=dep.value||'—';ph.innerText=hospital.value||'—';let d=date.value.split('-');pdate.innerText=d.length==3?d[2]+'-'+d[1]+'-'+d[0]:'—';final.style.display='block';final.scrollIntoView({behavior:'smooth'})}
+function finish(){let a=document.querySelectorAll('.station').length,b=document.querySelectorAll('.station.done').length;if(b<a){alert('يرجى إكمال جميع محطات رحلة التحول الصحي أولاً 🌟');return}pn.innerText=document.getElementById('name').value||'—';pd.innerText=document.getElementById('dep').value||'—';ph.innerText=document.getElementById('hospital').value||'—';let d=date.value.split('-');pdate.innerText=d.length==3?d[2]+'-'+d[1]+'-'+d[0]:'—';final.style.display='block';final.scrollIntoView({behavior:'smooth'})}
 </script></body></html>
